@@ -1,0 +1,42 @@
+{
+  "Real Madrid CF": {
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+    "players": ["Thibaut Courtois", "Karim Benzema", "Vinicius Jr.", "Luka Modric", "Eduardo Camavinga"]
+  },
+  "FC Barcelona": {
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+    "players": ["Marc-André ter Stegen", "Robert Lewandowski", "Pedri", "Frenkie de Jong", "Gavi"]
+  },
+  "Manchester City": {
+    "logo": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+    "players": ["Ederson", "Kevin De Bruyne", "Erling Haaland", "Phil Foden", "Ruben Dias"]
+  },
+  "Bayern Munich": {
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg",
+    "players": ["Manuel Neuer", "Thomas Müller", "Joshua Kimmich", "Sadio Mané", "Kingsley Coman"]
+  },
+  "Paris Saint-Germain": {
+    "logo": "https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg",
+    "players": ["Gianluigi Donnarumma", "Kylian Mbappé", "Lionel Messi", "Marquinhos", "Sergio Ramos"]
+  },
+  "Chelsea FC": {
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg",
+    "players": ["Kepa Arrizabalaga", "Mason Mount", "Raheem Sterling", "Enzo Fernandez", "Reece James"]
+  },
+  "AC Milan": {
+    "logo": "https://images.seeklogo.com/logo-png/0/1/ac-milan-logo-png_seeklogo-2260.png",
+    "players": ["Mike Maignan", "Olivier Giroud", "Rafael Leão", "Theo Hernández", "Sandro Tonali"]
+  },
+  "Napoli": {
+    "logo": "https://toppng.com/uploads/preview/ssc-napoli-vector-logo-11573729216rpp9rw7ffr.png",
+    "players": ["Alex Meret", "Victor Osimhen", "Giovanni Di Lorenzo", "Khvicha Kvaratskhelia", "Piotr Zielinski"]
+  },
+  "Manchester United": {
+    "logo": "https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg",
+    "players": ["David de Gea", "Bruno Fernandes", "Marcus Rashford", "Casemiro", "Lisandro Martínez"]
+  },
+  "Atlético Madrid": {
+    "logo": "https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg",
+    "players": ["Jan Oblak", "João Félix", "Antoine Griezmann", "Koke", "Mario Hermoso"]
+  }
+}

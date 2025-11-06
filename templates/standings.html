@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="color:#60a5fa; text-align:center; margin:20px 0;">Champions League Standings</h1>
+
+<div style="max-width:900px; margin:0 auto;">
+  {% if table %}
+  <table style="width:100%; border-collapse:collapse; background:#1e293b; border-radius:12px; overflow:hidden;">
+    <thead>
+      <tr style="background:#2563eb; color:#fff;">
+        <th style="padding:10px;">#</th>
+        <th style="padding:10px;">Team</th>
+        <th style="padding:10px;">Played</th>
+        <th style="padding:10px;">Won</th>
+        <th style="padding:10px;">Draw</th>
+        <th style="padding:10px;">Lost</th>
+        <th style="padding:10px;">Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for team in table %}
+      <tr style="text-align:center; border-bottom:1px solid #111827;">
+        <td>{{ team.position }}</td>
+        <td style="display:flex; align-items:center; gap:8px; padding-left:10px;">
+          {% if team.team.logo %}
+          <img src="{{ team.team.logo }}" style="width:24px; height:24px;">
+          {% endif %}
+          {{ team.team.name }}
+        </td>
+        <td>{{ team.playedGames }}</td>
+        <td>{{ team.won }}</td>
+        <td>{{ team.draw }}</td>
+        <td>{{ team.lost }}</td>
+        <td>{{ team.points }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p style="color:#94a3b8; text-align:center; margin-top:20px;">No standings available or your subscription does not allow access.</p>
+  {% endif %}
+</div>
+
+{% endblock %}

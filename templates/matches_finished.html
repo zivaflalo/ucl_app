@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="color:#60a5fa; text-align:center; margin:20px 0;">Finished Matches</h1>
+
+<div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap:20px;">
+  {% if matches %}
+    {% for match in matches %}
+    {% set home_score = match.score.home %}
+    {% set away_score = match.score.away %}
+
+    {% if home_score > away_score %}
+      {% set home_class = 'win' %}
+      {% set away_class = 'loss' %}
+    {% elif home_score < away_score %}
+      {% set home_class = 'loss' %}
+      {% set away_class = 'win' %}
+    {% else %}
+      {% set home_class = 'draw' %}
+      {% set away_class = 'draw' %}
+    {% endif %}
+
+    <div class="match-card">
+      <div class="team {{ home_class }}">
+        {% if match.home_logo %}
+        <img src="{{ match.home_logo }}" class="team-logo">
+        {% endif %}
+        <span>{{ match.home }}</span>
+      </div>
+      <div class="score">{{ home_score }} - {{ away_score }}</div>
+      <div class="team {{ away_class }}">
+        {% if match.away_logo %}
+        <img src="{{ match.away_logo }}" class="team-logo">
+        {% endif %}
+        <span>{{ match.away }}</span>
+      </div>
+      <div class="status finished">{{ match.status }}</div>
+    </div>
+    {% endfor %}
+  {% else %}
+  <p style="color:#94a3b8; text-align:center;">No finished matches.</p>
+  {% endif %}
+</div>
+
+<style>
+.match-card {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#111827;
+  padding:12px 15px;
+  border-radius:12px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  color:#e5e7eb;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.match-card:hover {
+  transform: translateY(-3px);
+  background:#273449;
+}
+
+.team {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.team-logo {
+  width:28px;
+  height:28px;
+  object-fit:contain;
+}
+
+.score {
+  font-weight:bold;
+  color:#60a5fa;
+}
+
+/* Result colors */
+.win { color:#22c55e; font-weight:bold; }
+.loss { color:#ef4444; }
+.draw { color:#facc15; }
+
+/* Status badge */
+.status.finished {
+  background:#22c55e;
+  color:#fff;
+  padding:2px 6px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+}
+</style>
+
+{% endblock %}

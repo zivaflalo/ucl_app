@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f4f4f9;
+}
+
+header {
+  background: #0a1a57;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+h2 {
+  color: #0a1a57;
+  margin-top: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+a:hover {
+  color: #38bdf8;
+  transform: scale(1.05);
+}
+
+.collapsible:hover {
+  background:#2563eb; /* blue hover */
+  color:#fff;
+}
+
