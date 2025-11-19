@@ -97,6 +97,23 @@ def standings():
 if __name__ == "__main__":
     app.run(debug=True)
 
-    # test
-# test2
-# test3
+# # macOS Flask Quick Commands
+
+# # venv on/off
+# source venv/bin/activate
+# deactivate
+
+# # Flask install & run
+# pip install flask
+# python app.py
+
+# # Flask CLI
+# export FLASK_APP=app.py
+# flask run
+
+# # Dev mode
+# export FLASK_ENV=development
+# flask run
+
+# # Stop Flask
+# CTRL + C
